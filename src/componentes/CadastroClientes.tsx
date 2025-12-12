@@ -19,6 +19,8 @@ export default function CadastroClientes() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  /*
+  //* ======== ANTIGO (comentado) ========
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -28,6 +30,18 @@ export default function CadastroClientes() {
       alert("Erro ao cadastrar cliente");
     }
   };
+  // ====================================
+  */
+
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    await axios.post("https://fourprime-bakend-api.onrender.com/clientes", form);
+    alert("Cliente cadastrado com sucesso!");
+  } catch (err) {
+    alert("Erro ao cadastrar cliente");
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-blue-100 p-6">
