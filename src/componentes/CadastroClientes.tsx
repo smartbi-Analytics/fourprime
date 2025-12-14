@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../app.css"; // <-- Adicione esta linha
+
 
 export default function CadastroClientes() {
   const [form, setForm] = useState({

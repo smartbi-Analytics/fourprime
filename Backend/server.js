@@ -37,7 +37,7 @@ app.post("/clientes", (req, res) => {
     dados.pri_nome,
     dados.sob_nome,
     dados.cpf,
-    dados.país,
+    dados.pais,
     dados.estado,
     dados.cidade,
     dados.bairro,
